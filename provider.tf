@@ -15,9 +15,9 @@ terraform {
 }
 
 data "aws_eks_cluster" "default" {
-  name = "eks-SAJ6-PGMBOX"
+  name = "eks"
 }
 
 data "aws_eks_cluster_auth" "default" {
-  name = "eks-SAJ6-PGMBOX"
+  name = "eks"
 }

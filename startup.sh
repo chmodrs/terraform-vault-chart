@@ -8,7 +8,7 @@ sed -i -e "s/VAULT_KMS_ID/$VAULT_KMS_ID/g" vault.tf
 
 rm -rf .terraform
 terraform --version
-terraform init -backend-config "bucket=cloudtech-terraform-tfstate" -backend-config "region=sa-east-1" -backend-config "key=pgmbox-vault"
+terraform init -backend-config "bucket=terraform-tfstate" -backend-config "region=sa-east-1" -backend-config "key=vault"
 
 if [[ $(terraform workspace list | grep 'production' | wc -l ) = 0 ]]; then
   terraform workspace new production

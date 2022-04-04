@@ -15,7 +15,7 @@ resource "helm_release" "vault" {
 
   set {
     name  = "server.image.repository"
-    value = "docker-unj-repo.softplan.com.br/sre/vault"
+    value = "vault"
   }
 
   set {
@@ -25,7 +25,7 @@ resource "helm_release" "vault" {
 
   set {
     name  = "injector.image.repository"
-    value = "docker-unj-repo.softplan.com.br/sre/vault-k8s"
+    value = "vault-k8s"
   }
 
   set {
@@ -35,7 +35,7 @@ resource "helm_release" "vault" {
 
   set {
     name  = "injector.agentImage.repository"
-    value = "docker-unj-repo.softplan.com.br/sre/vault"
+    value = "vault"
   }
 
   set {
